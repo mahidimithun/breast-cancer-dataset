@@ -24,15 +24,15 @@ The Python pipeline is executed sequentially to transform raw medical metrics in
 
 ### 1. Feature Correlation Heatmap
 <img width="377" height="742" alt="breast_cancer_correlation_heatmap" src="https://github.com/user-attachments/assets/716b2fd2-b1d5-407e-9137-36fabbe1746a" />
-* **Analysis:** This heatmap visualizes the Pearson correlation coefficients across the feature matrix. It highlights widespread **multicollinearity** (such as near-perfect correlations of `1.00` among tumor radius, perimeter, and area). Highly correlated features are mathematically redundant. Isolating them helps streamline model input, minimizes overfitting, and enables the SVM algorithm to locate optimal decision boundaries efficiently.
+**Analysis:** This heatmap visualizes the Pearson correlation coefficients across the feature matrix. It highlights widespread **multicollinearity** (such as near-perfect correlations of `1.00` among tumor radius, perimeter, and area). Highly correlated features are mathematically redundant. Isolating them helps streamline model input, minimizes overfitting, and enables the SVM algorithm to locate optimal decision boundaries efficiently.
 
 ### 2. Feature Distribution and Density Analysis
 <img width="996" height="372" alt="graphs" src="https://github.com/user-attachments/assets/08cf0dc5-4a83-4cce-920c-11757465b9c0" />
-* **Analysis:** A matrix of individual density plots illustrating the separation curves between Benign (0) and Malignant (1) classes across key clinical measurements. Distinct, non-overlapping peaks indicate high feature importance, signaling exactly which data attributes give the model the clearest instructions for drawing structural classification splits.
+**Analysis:** A matrix of individual density plots illustrating the separation curves between Benign (0) and Malignant (1) classes across key clinical measurements. Distinct, non-overlapping peaks indicate high feature importance, signaling exactly which data attributes give the model the clearest instructions for drawing structural classification splits.
 
 ### 3. 3D Spatial Feature Decision Space
 <img width="595" height="621" alt="3d graph" src="https://github.com/user-attachments/assets/8fc9cc5c-2a0c-47b3-842c-50b4711406ea" />
-* **Analysis:** A 3-dimensional scatter plot displaying data distribution across three major geometric components. By mapping features into a three-dimensional geometric space, this graph simulates how an SVM identifies multi-dimensional hyperplanes. It visually demonstrates how a non-linear kernel warps data coordinates to cleanly separate benign and malignant clusters.
+**Analysis:** A 3-dimensional scatter plot displaying data distribution across three major geometric components. By mapping features into a three-dimensional geometric space, this graph simulates how an SVM identifies multi-dimensional hyperplanes. It visually demonstrates how a non-linear kernel warps data coordinates to cleanly separate benign and malignant clusters.
 
 ---
 
@@ -41,10 +41,10 @@ The Python pipeline is executed sequentially to transform raw medical metrics in
 ### 1. Confusion Matrix Breakdown
 Based on the testing split evaluation, the model's predictions are categorized into the following matrix:
 
-* **True Negatives (TN) = 71:** The model correctly identified 71 benign tumors as Benign ($0$).
-* **True Positives (TP) = 39:** The model correctly identified 39 malignant tumors as Malignant ($1$).
-* **False Positives (FP) = 1:** The model made 1 "false alarm," predicting a tumor was malignant when it was actually benign.
-* **False Negatives (FN) = 3:** **The most critical metric in diagnostics.** The model missed 3 malignant cases, predicting them as benign. In medical AI, the goal is to drive this number as close to 0 as possible to avoid leaving an active condition undetected.
+**True Negatives (TN) = 71:** The model correctly identified 71 benign tumors as Benign ($0$).
+**True Positives (TP) = 39:** The model correctly identified 39 malignant tumors as Malignant ($1$).
+**False Positives (FP) = 1:** The model made 1 "false alarm," predicting a tumor was malignant when it was actually benign.
+**False Negatives (FN) = 3:** **The most critical metric in diagnostics.** The model missed 3 malignant cases, predicting them as benign. In medical AI, the goal is to drive this number as close to 0 as possible to avoid leaving an active condition undetected.
 
 ---
 
@@ -58,13 +58,13 @@ Based on the testing split evaluation, the model's predictions are categorized i
 | **Accuracy** | - | - | **🏆 Overall Accuracy: 96.49%** (110 / 114 correct predictions) |
 
 #### Metric Significance:
-* **Recall (Sensitivity) for Class 1 (0.93):** This indicates high clinical reliability. The model minimized false negatives effectively, successfully isolating 93% of the malignant instances.
-* **Macro vs. Weighted Averages (0.96 / 0.96):** The tight alignment between these averages confirms that the model is performing stably across both classes without being silently biased by the majority class distribution.
+**Recall (Sensitivity) for Class 1 (0.93):** This indicates high clinical reliability. The model minimized false negatives effectively, successfully isolating 93% of the malignant instances.
+**Macro vs. Weighted Averages (0.96 / 0.96):** The tight alignment between these averages confirms that the model is performing stably across both classes without being silently biased by the majority class distribution.
 
 ---
 
 ## 💻 Tech Stack Used
-* **Language:** Python
-* **Data Libraries:** Pandas, NumPy
-* **Machine Learning:** Scikit-Learn (SVC, StandardScaler, train_test_split)
-* **Visualization:** Matplotlib, Seaborn
+**Language:** Python
+**Data Libraries:** Pandas, NumPy
+**Machine Learning:** Scikit-Learn (SVC, StandardScaler, train_test_split)
+**Visualization:** Matplotlib, Seaborn
