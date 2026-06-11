@@ -24,20 +24,25 @@ The Python pipeline is executed sequentially to transform raw medical metrics in
 
 ### 1. Feature Correlation Heatmap
 <img width="377" height="742" alt="breast_cancer_correlation_heatmap" src="https://github.com/user-attachments/assets/716b2fd2-b1d5-407e-9137-36fabbe1746a" />
+
 **Analysis:** This heatmap visualizes the Pearson correlation coefficients across the feature matrix. It highlights widespread **multicollinearity** (such as near-perfect correlations of `1.00` among tumor radius, perimeter, and area). Highly correlated features are mathematically redundant. Isolating them helps streamline model input, minimizes overfitting, and enables the SVM algorithm to locate optimal decision boundaries efficiently.
 
 ### 2. Feature Distribution and Density Analysis
 <img width="996" height="372" alt="graphs" src="https://github.com/user-attachments/assets/08cf0dc5-4a83-4cce-920c-11757465b9c0" />
+
 **Analysis:** A matrix of individual density plots illustrating the separation curves between Benign (0) and Malignant (1) classes across key clinical measurements. Distinct, non-overlapping peaks indicate high feature importance, signaling exactly which data attributes give the model the clearest instructions for drawing structural classification splits.
 
 ### 3. 3D Spatial Feature Decision Space
 <img width="595" height="621" alt="3d graph" src="https://github.com/user-attachments/assets/8fc9cc5c-2a0c-47b3-842c-50b4711406ea" />
+
 **Analysis:** A 3-dimensional scatter plot displaying data distribution across three major geometric components. By mapping features into a three-dimensional geometric space, this graph simulates how an SVM identifies multi-dimensional hyperplanes. It visually demonstrates how a non-linear kernel warps data coordinates to cleanly separate benign and malignant clusters.
 
 ---
 
 ## 🔬 Model Performance Evaluation
+
 <img width="400" height="482" alt="confusion_matrix" src="https://github.com/user-attachments/assets/d0474e74-9252-4804-9877-c039edad8a64" />
+
 ### 1. Confusion Matrix Breakdown
 Based on the testing split evaluation, the model's predictions are categorized into the following matrix:
 
