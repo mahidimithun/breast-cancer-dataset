@@ -46,9 +46,9 @@ The Python pipeline is executed sequentially to transform raw medical metrics in
 ### 1. Confusion Matrix Breakdown
 Based on the testing split evaluation, the model's predictions are categorized into the following matrix:
 
-**True Negatives (TN) = 71:** The model correctly identified 71 benign tumors as Benign ($0$).
+**True Negatives (TN) = 72:** The model correctly identified 71 benign tumors as Benign ($0$).
 **True Positives (TP) = 39:** The model correctly identified 39 malignant tumors as Malignant ($1$).
-**False Positives (FP) = 1:** The model made 1 "false alarm," predicting a tumor was malignant when it was actually benign.
+**False Positives (FP) = 0:** The model made 1 "false alarm," predicting a tumor was malignant when it was actually benign.
 **False Negatives (FN) = 3:** **The most critical metric in diagnostics.** The model missed 3 malignant cases, predicting them as benign. In medical AI, the goal is to drive this number as close to 0 as possible to avoid leaving an active condition undetected.
 
 ---
